@@ -1,0 +1,32 @@
+{
+  "name": "crayon-editor",
+  "version": "1.0.0",
+  "description": "mobile h5 full editor",
+  "main": "index.js",
+  "repository": "https://github.com/zhangporco/crayon-editor.git",
+  "author": "张超 <zhangporco@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev-vue": "parcel ./index.html --port 8888",
+    "build": "parcel build ./src/index.js"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs2": "^7.8.7",
+    "babel-polyfill": "^6.26.0",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "@vue/component-compiler-utils": "^3.1.1",
+    "parcel-bundler": "^1.12.4",
+    "pug": "^2.0.4",
+    "sass": "^1.26.3",
+    "typescript": "^3.8.3",
+    "vue": "^2.6.11",
+    "vue-hot-reload-api": "^2.3.4",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
