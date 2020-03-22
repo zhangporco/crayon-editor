@@ -1,9 +1,5 @@
 import { CUSTOM_TAG_FLAG } from '../constant'
 
-import {
-  getElement
-} from '../utils'
-
 import img from '../images/insert-img.png'
 
 const INPUT_FILE_ID = 'insert-img-file'
