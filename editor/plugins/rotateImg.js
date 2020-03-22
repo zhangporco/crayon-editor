@@ -15,9 +15,8 @@ export default {
   display: true,
   render: (target) => {
     if (!isTextElement(target) && hasEdit(target)) {
-      console.log(111)
       return `
-      <div plugin-type="rotate-img" style="width:1.62rem;height:0.48rem;line-height:0.48rem;position:absolute;right:100px;color:red;font-size:15px;font-weight:500;">
+      <div plugin-type="rotate-img" style="width:60px;height:24px;line-height:0.48rem;position:absolute;right:100px;color:red;font-size:15px;font-weight:500;">
         旋转图片
       </div>
     `
