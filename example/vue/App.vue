@@ -6,10 +6,10 @@
 </template>
 
 <script>
-import ColorPen from '../../editor'
+import Crayon from '../../editor'
 import h5 from './h5'
 
-const editor = new ColorPen({
+const editor = new Crayon({
   id: 'example-vue',
   plugins: [
     'edit',
