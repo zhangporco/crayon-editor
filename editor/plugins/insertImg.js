@@ -1,5 +1,9 @@
 import { CUSTOM_TAG_FLAG } from '../constant'
 
+import {
+  getElement
+} from '../utils'
+
 import img from '../images/insert-img.png'
 
 const INPUT_FILE_ID = 'insert-img-file'
@@ -10,6 +14,9 @@ const INPUT_FILE_ID = 'insert-img-file'
  * @param {*} clean
  */
 const insertLocalImg = (activeTarget, clean) => {
+  if (activeTarget.parentNode && activeTarget.parentNode.getAttribute('insert-img-block') === 'true') {
+    activeTarget = activeTarget.parentNode
+  }
   const fileInput = document.getElementById(INPUT_FILE_ID)
   fileInput.click()
   fileInput.addEventListener('change', async (e) => {
@@ -21,7 +28,7 @@ const insertLocalImg = (activeTarget, clean) => {
       const html = `
         ${activeTarget.outerHTML}
         </br>
-        <div style="display:flex;justify-content: center;flex-wrap: wrap;">
+        <div insert-img-block="true" style="display:flex;justify-content: center;flex-wrap: wrap;">
           <img style="margin-top:20px;width:80%;height:100%!important;" src=${data} />
         </div>
       `
