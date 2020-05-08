@@ -2,7 +2,7 @@
  * @Author: 张超
  * @Date: 2020-03-06 16:00:03
  * @Last Modified by: zhangchao
- * @Last Modified time: 2020-03-21 21:58:12
+ * @Last Modified time: 2020-05-07 19:44:32
  * @ChangeLog
  *   v1.0.0 http://cf.dui88.com/pages/viewpage.action?pageId=51163432 移动端文章二次编辑 张超
  */
@@ -29,7 +29,7 @@ export default class Editor {
    * @param {*} html
    */
   init(html) {
-    return core.init(this.id, html, this.plugins, this.clickCallback)
+    core.init(this.id, html, this.plugins, this.clickCallback)
   }
 
   /**

@@ -2,7 +2,7 @@
  * @Author: zhangchao
  * @Date: 2020-03-09 12:04:32
  * @Last Modified by: zhangchao
- * @Last Modified time: 2020-03-21 17:50:01
+ * @Last Modified time: 2020-05-07 19:31:34
  * 编辑器核心区
  */
 import throttle from 'lodash/throttle'
@@ -230,7 +230,7 @@ export default class Core {
    * 初始化编辑器接口
    *
    * @param {*} id 必填，包装内容
-   * @param {*} html 必填，内容 html
+   * @param {*} html 选填，内容 html
    * @param {*} plugins 选填，控制插件加载
    * @param {*} clickCallback 选填，点击时通知业务方
    * @returns layoutHtml 包装后的 html
@@ -243,8 +243,7 @@ export default class Core {
     setTimeout(() => {
       this.initLifeCycle(id)
     }, 0)
-    const layoutHtml = htmlFactory.initLayout(id, html)
-    return layoutHtml
+    htmlFactory.initLayout(id, html)
   }
 
   /**

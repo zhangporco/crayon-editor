@@ -12,8 +12,10 @@ import {
  * 加工输出 html
  */
 export default class HtmlFactory {
-  initLayout(id, html) {
-    return `<div id=${id}>${html}</div>`
+  initLayout(id = '', html = '') {
+    const dom = document.getElementById(id)
+    if (!dom) return
+    dom.innerHTML = html || dom.innerHTML
   }
 
   /**
