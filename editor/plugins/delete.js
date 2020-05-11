@@ -5,9 +5,7 @@ const imgStyle = 'position:absolute;right:8px;bottom:-9px;width:15px;height:15px
 // 删除激活区
 export default {
   id: 'del',
-  name: '',
   html: `<img plugin-type="del" src="${icon}" style=${imgStyle}>`,
-  sort: 0,
   display: true,
   click(self, activeTarget, clean) {
     activeTarget.remove()

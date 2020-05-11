@@ -10,7 +10,6 @@ export default {
   id: 'auto-save',
   name: '自动保存',
   html: '',
-  sort: 0,
   display: false,
   clickDom: async (target, oldTarget) => {
     return true

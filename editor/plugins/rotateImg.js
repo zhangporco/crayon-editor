@@ -4,20 +4,21 @@ import {
   hasEdit
 } from '../utils'
 
+import img from '../images/rotate-img.png'
+
 let rotate = 0
 
 // 旋转图片
 export default {
   id: 'rotate-img',
   name: '旋转图片',
-  img: '',
   position: 'bottom',
   display: true,
   render: (target) => {
     if (!isTextElement(target) && hasEdit(target)) {
       return `
-      <div plugin-type="rotate-img" style="width:60px;height:24px;line-height:0.48rem;position:absolute;right:100px;color:red;font-size:15px;font-weight:500;">
-        旋转图片
+      <div plugin-type="rotate-img" style="width:84px;height:25px;position:absolute;right:100px;top:-7px;">
+        <img plugin-type="rotate-img" src="${img}" style="width:100%;height:100%;">
       </div>
     `
     }

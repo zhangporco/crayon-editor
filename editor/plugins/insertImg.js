@@ -39,7 +39,6 @@ const insertLocalImg = (activeTarget, clean) => {
 export default {
   id: 'insert-img',
   name: '插入图片',
-  img: '',
   html: `
     <div plugin-type="insert-img" style="width:84px;height:25px;position:absolute;right:13px;top:-7px;">
       <img plugin-type="insert-img" src="${img}" style="width:100%;height:100%;">

@@ -15,15 +15,16 @@
 <script>
 import Crayon from '../../editor'
 import h5 from './h5'
+import demo from '../plugins/demo'
 
 const editor = new Crayon({
   id: 'example-vue',
   plugins: [
     'edit',
     'del',
-    'auto-save',
     'insert-img',
-    'rotate-img'
+    'rotate-img',
+    demo
   ]
 })
 

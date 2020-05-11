@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: './example/vue/index.js',
   output: {
     path: path.resolve(__dirname, '../dist'),
@@ -16,6 +16,7 @@ module.exports = {
     hot: true,
     open: true
   },
+  devtool: 'eval',
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'

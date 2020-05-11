@@ -3,7 +3,6 @@ export default {
   id: 'cancel',
   name: '取消',
   html: '',
-  sort: 0,
   display: false,
   clickDom: (target, oldTarget) => {
     return new Promise((resolve, reject) => {

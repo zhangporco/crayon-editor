@@ -42,3 +42,8 @@ export const BLOCK_ELEMENTS = [
   'blockquote',
   'section'
 ]
+
+/**
+ * 插件位置
+ */
+export const PLUGIN_POSITION = ['top', 'bottom']

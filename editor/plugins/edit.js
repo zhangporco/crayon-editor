@@ -6,7 +6,6 @@ import {
 export default {
   id: 'edit',
   name: '编辑',
-  sort: 0,
   display: false,
   clickDom: (target, oldTarget) => {
     if (oldTarget) {

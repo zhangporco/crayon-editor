@@ -11,7 +11,6 @@ const editor = new Crayon({
   plugins: [
     'edit',
     'del',
-    'auto-save',
     'insert-img',
     'rotate-img'
   ]
@@ -29,7 +28,6 @@ editor.init()
 
 - edit
 - del
-- auto-save
 - insert-img
 - rotate-img
 

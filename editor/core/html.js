@@ -4,8 +4,40 @@ import {
 } from '../constant'
 import {
   getScrollTop,
-  getTargetRect
+  getTargetRect,
+  stringifyStyle
 } from '../utils'
+
+/**
+ * 获取默认自定义插件 html
+ * @param {*} id 插件 id
+ * @param {*} name 插件名
+ */
+const getDefaultPlugin = (id, name, position) => {
+  const style = {
+    'font-size': '12px',
+    'max-width': '50px',
+    'height': '25px',
+    'line-height': '25px',
+    'color': '#fff',
+    'text-align': 'center',
+    'background': 'rgba(255,97,97,1)'
+  }
+  return `<div plugin-type="${id}" style="${stringifyStyle(style)}">${name}</div>`
+}
+
+/**
+ * 渲染插件
+ * @param {*} plugin 
+ * @param {*} target 
+ */
+const renderPlugin = (plugin, target) => {
+  const { id, name, html, position, render } = plugin
+  if (typeof render === 'function') {
+   return render(target)
+  }
+  return html || getDefaultPlugin(id, name, position)
+}
 
 /**
  * 核心区 html工厂
@@ -55,22 +87,19 @@ export default class HtmlFactory {
 
     top += getScrollTop()
 
-    const blockHeight = 10
+    const blockHeight = 0
     const blockWidth = 30
 
     let topPlugin = ''
     let bottomPlugin = ''
     for (const k in plugins) {
-      if (!plugins[k].display) continue
-      let html = plugins[k].html || ''
-      if (typeof plugins[k].render === 'function') {
-        html = plugins[k].render(target)
-      }
-      if (plugins[k].position) {
-        if (plugins[k].position === 'bottom') {
-          bottomPlugin += html
-        }
-      } else {
+      const { display, position } = plugins[k]
+      if (!display) continue
+
+      const html = renderPlugin(plugins[k], target)
+      if (position === 'bottom') {
+        bottomPlugin += html
+      } else if (position === 'top') {
         topPlugin += html
       }
     }

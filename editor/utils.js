@@ -121,3 +121,15 @@ export const getTargetRect = (target, custom) => {
   if (!target) return { top: 0, left: 0, width: 0, height: 0 }
   return target.getBoundingClientRect()
 }
+
+/**
+ * 格式化 style
+ * @param {*} style 
+ */
+export const stringifyStyle = (style) => {
+  let res = ''
+  for (const k of Object.keys(style)) {
+    res += `${k}:${style[k]};`
+  }
+  return res
+}
