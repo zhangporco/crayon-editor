@@ -1710,6 +1710,13 @@ core-util-is@~1.0.0:
   resolved "https://registry.npm.taobao.org/core-util-is/download/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
+crayon-editor@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/crayon-editor/-/crayon-editor-1.0.2.tgz#bfe7f7e510f22dc913ea961b9c4fbec69391a421"
+  integrity sha512-6aMr9Lhxh6f7XV3/hgt1P+qpDFksrzb9wSBID+n7zZbgsI05nBPNhASX7hLOz7vG2CV2r0k4TD6BRfbO91z3ZQ==
+  dependencies:
+    lodash "^4.17.15"
+
 create-ecdh@^4.0.0:
   version "4.0.3"
   resolved "https://registry.npm.taobao.org/create-ecdh/download/create-ecdh-4.0.3.tgz#c9111b6f33045c4697f144787f9254cdc77c45ff"

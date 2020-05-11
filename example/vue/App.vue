@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Crayon from '../../editor'
+import Crayon from 'crayon-editor'
 import h5 from './h5'
 import demo from '../plugins/demo'
 
