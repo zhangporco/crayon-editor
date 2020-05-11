@@ -1,6 +1,6 @@
 {
   "name": "crayon-editor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "mobile h5 full editor",
   "main": "./editor/index.js",
   "repository": "https://github.com/zhangporco/crayon-editor.git",
