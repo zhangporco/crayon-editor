@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>render · Crayon Editor</title>
+        <title>activeContentChange · Crayon Editor</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="click.html" />
+    <link rel="next" href="contentStyleChange.html" />
     
+    
+    <link rel="prev" href="addContentNode.html" />
     
 
     </head>
@@ -217,7 +219,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="render.html">
+        <li class="chapter " data-level="1.4.1" data-path="render.html">
             
                 <a href="render.html">
             
@@ -321,7 +323,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.9" data-path="activeContentChange.html">
+        <li class="chapter active" data-level="1.4.9" data-path="activeContentChange.html">
             
                 <a href="activeContentChange.html">
             
@@ -382,7 +384,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >render</a>
+        <a href=".." >activeContentChange</a>
     </h1>
 </div>
 
@@ -397,17 +399,17 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="rendertarget">render(target)</h1>
-<p>&#x63D2;&#x4EF6;&#x6E32;&#x67D3;&#x51FD;&#x6570;&#xFF0C;&#x82E5;&#x5B9A;&#x4E49;&#x6B64;&#x51FD;&#x6570;&#x5C06;&#x4F1A;&#x81EA;&#x52A8;&#x5C4F;&#x853D;<strong>html</strong>&#x4EE5;&#x53CA;<strong>name</strong>&#x5C5E;&#x6027;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x9700;&#x8981;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<strong>html</strong>&#x8282;&#x70B9;</p>
-<p>@params target: &#x6FC0;&#x6D3B;&#x533A;dom</p>
+                                <h1 id="activecontentchangetarget-activetarget">activeContentChange(target, activeTarget)</h1>
+<p>&#x7F16;&#x8F91;&#x533A;&#x5185;&#x5BB9;&#x53D1;&#x751F;&#x53D8;&#x5316;</p>
+<p>@params target: &#x5185;&#x5BB9;&#x533A;dom
+@params content: &#x53D8;&#x5316;&#x5185;&#x5BB9;</p>
 <pre><code class="lang-javascript"><span class="hljs-comment">// test plugin</span>
 <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
   id: <span class="hljs-string">&apos;demo&apos;</span>,
-  name: <span class="hljs-string">&apos;demo&apos;</span>,
-  html: <span class="hljs-string">&apos;&lt;div&gt;demo&lt;/div&gt;&apos;</span>,
+  name: <span class="hljs-string">&apos;&apos;</span>,
   display: <span class="hljs-literal">true</span>,
-  render: (target) =&gt; {
-    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;&lt;div style=&quot;color:red;&quot;&gt;demo-plugin&lt;/div&gt;&apos;</span>
+  activeContentChange: (target, content) =&gt; {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
   }
 }
 </code></pre>
@@ -438,8 +440,12 @@
 
             
                 
+                <a href="addContentNode.html" class="navigation navigation-prev " aria-label="Previous page: addContentNode">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="click.html" class="navigation navigation-next navigation-unique" aria-label="Next page: click">
+                
+                <a href="contentStyleChange.html" class="navigation navigation-next " aria-label="Next page: contentStyleChange">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -450,7 +456,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"render","level":"1.4.1","depth":2,"next":{"title":"click","level":"1.4.2","depth":2,"path":"life-cycle/click.md","ref":"life-cycle/click.md","articles":[]},"previous":{"title":"生命周期","level":"1.4","depth":1,"ref":"","articles":[{"title":"render","level":"1.4.1","depth":2,"path":"life-cycle/render.md","ref":"life-cycle/render.md","articles":[]},{"title":"click","level":"1.4.2","depth":2,"path":"life-cycle/click.md","ref":"life-cycle/click.md","articles":[]},{"title":"clickDom","level":"1.4.3","depth":2,"path":"life-cycle/clickDom.md","ref":"life-cycle/clickDom.md","articles":[]},{"title":"activeWillMount","level":"1.4.4","depth":2,"path":"life-cycle/activeWillMount.md","ref":"life-cycle/activeWillMount.md","articles":[]},{"title":"activeDestroyed","level":"1.4.5","depth":2,"path":"life-cycle/activeDestroyed.md","ref":"life-cycle/activeDestroyed.md","articles":[]},{"title":"activeDidMount","level":"1.4.6","depth":2,"path":"life-cycle/activeDidMount.md","ref":"life-cycle/activeDidMount.md","articles":[]},{"title":"removeContentNode","level":"1.4.7","depth":2,"path":"life-cycle/removeContentNode.md","ref":"life-cycle/removeContentNode.md","articles":[]},{"title":"addContentNode","level":"1.4.8","depth":2,"path":"life-cycle/addContentNode.md","ref":"life-cycle/addContentNode.md","articles":[]},{"title":"activeContentChange","level":"1.4.9","depth":2,"path":"life-cycle/activeContentChange.md","ref":"life-cycle/activeContentChange.md","articles":[]},{"title":"contentStyleChange","level":"1.4.10","depth":2,"path":"life-cycle/contentStyleChange.md","ref":"life-cycle/contentStyleChange.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Porco","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Crayon Editor","gitbook":"*","description":"mobile full editor"},"file":{"path":"life-cycle/render.md","mtime":"2020-05-11T09:09:02.254Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-17T03:54:29.745Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"activeContentChange","level":"1.4.9","depth":2,"next":{"title":"contentStyleChange","level":"1.4.10","depth":2,"path":"life-cycle/contentStyleChange.md","ref":"life-cycle/contentStyleChange.md","articles":[]},"previous":{"title":"addContentNode","level":"1.4.8","depth":2,"path":"life-cycle/addContentNode.md","ref":"life-cycle/addContentNode.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Porco","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Crayon Editor","gitbook":"*","description":"mobile full editor"},"file":{"path":"life-cycle/activeContentChange.md","mtime":"2020-06-17T03:51:50.650Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-17T03:54:29.745Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

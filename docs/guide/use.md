@@ -60,7 +60,7 @@ editor.init()
 
 ##### back()
 
-回退，这真没法再解释了。
+回退。
 
 ##### stackInfo()
 
